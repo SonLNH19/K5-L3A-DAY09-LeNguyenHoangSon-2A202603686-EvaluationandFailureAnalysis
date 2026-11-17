@@ -47,7 +47,14 @@ def build(source: Path = SOURCE) -> tuple[int, int]:
             "item_id": item_id,
             "claim_id": claim["claim_id"],
             # TODO M1: replace [] with the FM-xx codes from your taxonomy that this item exercises.
-            "failure_modes": [],
+            "failure_modes": ["FM-01"] + {
+                "C-002": ["FM-03"],
+                "C-007": ["FM-02", "FM-08"],
+                "C-008": ["FM-08"],
+                "C-014": ["FM-04", "FM-05"],
+                "C-006": ["FM-06"],
+                "C-010": ["FM-07"],
+            }.get(claim["claim_id"], []),
             "provenance": {"source": "lab8_public", "matrix_id": claim.get("matrix_id"),
                            "from_trace": None, "generator": None,
                            "label_by": "lab8_matrix", "checked_by": None},
