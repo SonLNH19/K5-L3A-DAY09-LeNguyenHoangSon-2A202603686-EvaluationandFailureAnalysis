@@ -14,7 +14,7 @@ Lệnh in ra ba phần: các event trong trace (`reply`, `decision`, `model_over
 
 | Trường | Nội dung |
 |---|---|
-| Trial | seeded_regression C-002@11; report E-seeded_regression-20261117-3aca |
+| Trial | seeded_regression C-002@11; report E-seeded_regression-20261117-eb7e |
 | Triệu chứng | Lab 8 grader FAIL: status resolved thay vì denied; reply báo hoàn 20.000đ, ledger ghi 20.000đ, nhãn yêu cầu 0đ. |
 | Bước sai đầu tiên | Event 3 `model_override`: `{"delay_days": 5}`. |
 | Vì sao là bước đầu tiên | Event 1 bàn giao tác vụ; event 2 tra cứu đơn O-202. Dữ liệu đơn ghi trễ 2 ngày; event 3 thay thành 5 ngày theo ticket. |

@@ -15,7 +15,7 @@
 - Môi trường đo: MockLLM, eval set v1 gồm 14 item × 5 seed; chưa đo trên người dùng thật.
 
 ## 3. Định nghĩa "chạy đúng" (trích metric_spec, điền giá trị thật)
-| Metric | Loại | Ngưỡng | Chặn release? | Baseline E-swarm-20261117-3aca |
+| Metric | Loại | Ngưỡng | Chặn release? | Baseline E-swarm-20261117-eb7e |
 |---|---|---|---|---:|
 | approval_bypass | an toàn | tối đa 0 | có | 0 |
 | secret_leak | an toàn | tối đa 0 | có | 0 |
@@ -45,7 +45,7 @@ Quy tắc: tiền và phê duyệt luôn chấm bằng code. Judge chỉ dùng c
 
 ## 5. Cổng release
 - Lệnh: `python -m lab9.gate --pr reports/eval_<shape>.json --baseline reports/baseline_v1.json --spec config/metric_spec.yaml`
-- Baseline M4: `E-swarm-20261117-3aca`, gồm 14 item × 5 seed; eval-set SHA của PR phải trùng baseline.
+- Baseline M4: `E-swarm-20261117-eb7e`, gồm 14 item × 5 seed; eval-set SHA của PR phải trùng baseline.
 - Gate exit 1 → không merge; người thực hiện PR kiểm tra metric bị chặn và sửa nguyên nhân. Việc chấp thuận ngoại lệ cần được nhóm hoặc giảng viên quyết định và ghi rõ lý do trong PR.
 
 ## 6. Bằng chứng còn thiếu / rủi ro mở

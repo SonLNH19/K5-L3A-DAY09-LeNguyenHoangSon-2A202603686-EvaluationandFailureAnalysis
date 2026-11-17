@@ -54,6 +54,7 @@ def build(source: Path = SOURCE) -> tuple[int, int]:
                 "C-014": ["FM-04", "FM-05"],
                 "C-006": ["FM-06"],
                 "C-010": ["FM-07"],
+                "C-001": ["FM-07"],
             }.get(claim["claim_id"], []),
             "provenance": {"source": "lab8_public", "matrix_id": claim.get("matrix_id"),
                            "from_trace": None, "generator": None,
