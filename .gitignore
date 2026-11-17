@@ -3,3 +3,10 @@ __pycache__/
 src/reports/
 src/traces/
 *.sqlite
+.venv/
+.venv-*/
+venv/
+env/
+.env
+.env.*
+!.env.example
